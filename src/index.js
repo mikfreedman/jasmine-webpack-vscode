@@ -1,5 +1,8 @@
-export default class HelloWorld {
+export class HelloWorld {
+  constructor() {
+  
+  }
   say() {
-    return "Hello World!"
+    return "Hello World!";
   }
 }
