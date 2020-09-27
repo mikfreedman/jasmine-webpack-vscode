@@ -26,10 +26,10 @@ $> npm run build
 ```
 
 ## How it works
-
-The *Angular/Karma Test Explorer* expects you to setup karma to execute chrome to listen for debugger connections on port `9222`. Here's what the extension's default `launch.json` looks like:
+Using the *Angular/Karma Test Explorer* extension, you can attach to the Chrome instance that's running your Karma tests. The following configuration makes this work: [karma.conf.js](karma.conf.js), [.vscode/settings.json](.vscode/settings.json). The repo contains step by step diffs in its git log, I've detailed some key points below.
 
 ### Attaching the debugger
+The *Angular/Karma Test Explorer* expects you to setup karma to execute chrome to listen for debugger connections on port `9222`. Here's what the extension's default `launch.json` looks like:
 
 ```json
     "angularKarmaTestExplorer.debuggerConfiguration": {
