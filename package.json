@@ -2,9 +2,10 @@
   "name": "jasmine-webpack-vscode",
   "version": "1.0.0",
   "description": "Demonstrating Jasmine tests connected to VS Code",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/mikfreedman/jasmine-webpack-vscode/issues"
   },
-  "homepage": "https://github.com/mikfreedman/jasmine-webpack-vscode#readme"
+  "homepage": "https://github.com/mikfreedman/jasmine-webpack-vscode#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-karma-jasmine": "^4.0.0"
+  }
 }
