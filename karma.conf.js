@@ -29,7 +29,7 @@ module.exports = function (config) {
       //list of frameworks you want to use, only jasmine is installed with this boilerplate
       frameworks: ['jasmine'],
       //list of browsers to launch and capture
-      browsers: ['Chrome'/*,'PhantomJS','Firefox','Edge','ChromeCanary','Opera','IE','Safari'*/],
+      browsers: ['ChromeHeadless'/*,'PhantomJS','Firefox','Edge','ChromeCanary','Opera','IE','Safari'*/],
       //list of reporters to use
       reporters: ['mocha', 'kjhtml'/*,'dots','progress','spec'*/],
    
