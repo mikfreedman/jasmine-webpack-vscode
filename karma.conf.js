@@ -6,7 +6,7 @@ module.exports = function (config) {
       exclude: [],
       //files/patterns to load in the browser
       files: [
-        { pattern: 'tests/*.js', watched: true, served: true, included: true }
+        { pattern: 'test/*_spec.js', watched: true, served: true, included: true }
         /*parameters:
             watched: if autoWatch is true all files that have set watched to true will be watched for changes
             served: should the files be served by Karma's webserver?
@@ -84,7 +84,7 @@ module.exports = function (config) {
       },
       preprocessors: {
         //add webpack as preprocessor to support require() in test-suits .js files
-        './tests/*.js': ['webpack']
+        './test/*.js': ['webpack']
       },
       webpackMiddleware: {
         //turn off webpack bash output when run the tests
