@@ -77,6 +77,10 @@ module.exports = function (config) {
          the ES6+ code in the test files readable to the browser  
          eg. import, export keywords */
       webpack: {
+        devtool: "inline-source-map",
+        optimization: {
+          minimize: false
+        },
         module: {
           rules: [
             {
