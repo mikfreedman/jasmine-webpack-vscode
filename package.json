@@ -4,7 +4,7 @@
   "description": "Demonstrating Jasmine tests connected to VS Code",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
     "build": "webpack"
   },
   "repository": {
