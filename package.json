@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/mikfreedman/jasmine-webpack-vscode#readme",
   "devDependencies": {
+    "karma-sourcemap-loader": "^0.3.8",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-karma-jasmine": "^4.0.0"

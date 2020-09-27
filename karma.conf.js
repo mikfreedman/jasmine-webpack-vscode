@@ -29,7 +29,15 @@ module.exports = function (config) {
       //list of frameworks you want to use, only jasmine is installed with this boilerplate
       frameworks: ['jasmine'],
       //list of browsers to launch and capture
-      browsers: ['ChromeHeadless'/*,'PhantomJS','Firefox','Edge','ChromeCanary','Opera','IE','Safari'*/],
+      browsers: ['ChromeHeadlessDebugging'/*,'PhantomJS','Firefox','Edge','ChromeCanary','Opera','IE','Safari'*/],
+      customLaunchers: {
+        ChromeHeadlessDebugging: {
+          base: 'ChromeHeadless',
+          flags: [
+            '--remote-debugging-port=9222'
+          ]
+        }
+      },
       //list of reporters to use
       reporters: ['mocha', 'kjhtml'/*,'dots','progress','spec'*/],
    
