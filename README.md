@@ -1,28 +1,35 @@
 # Jasmine, Webpack and Visual Studio Code
 Run *and debug* [Jasmine](https://jasmine.github.io/2.0/introduction) tests executed using the [Karma](https://karma-runner.github.io/latest/index.html) test runner, right from [VS Code](https://code.visualstudio.com/)!
 
-# Installation 
+## Installation 
 
 1. Install VSCode (`brew cask install visual-studio-code`)
 1. Install [Angular/Karma Test Explorer for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=raagh.angular-karma-test-explorer)
 1. `npm install`
-1. Use the "Test Explorer" in VS Code to run / debug tests
 
-# Command Line
 ## Test
+Use the "Test Explorer" in VS Code to run / debug tests
+
+Break right into your code, with variable names and everything!
+
+![Results](results.png)
+ 
+
+## Command Line
+### Test
 ```bash
 $> npm run test
 ```
-## Build
+### Build
 ```bash
 $> npm run build
 ```
 
-# How it works
+## How it works
 
-The *Angular/Karma Test Explorer* expects you to setup karma to execute chrome to listen for debugger connections on port `9222`. Here's what the extensions default `launch.json` looks like:
+The *Angular/Karma Test Explorer* expects you to setup karma to execute chrome to listen for debugger connections on port `9222`. Here's what the extension's default `launch.json` looks like:
 
-## Attaching the debugger
+### Attaching the debugger
 
 ```json
     "angularKarmaTestExplorer.debuggerConfiguration": {
@@ -63,7 +70,7 @@ Confirm this works by looking at the extension logs and seeing something like th
 [3:24:33 PM] INFO: Test loading completed
 ```
 
-## Mapping Source
+### Mapping Source
 Get webpack to emit inline source maps in [karma.conf.js](karma.conf.js). Also ask it nicely to not minimize the generated code so that variable names match.
 
 ```diff
@@ -82,4 +89,3 @@ Keep an eye out for errant Chrome instances that gum up the works and generally 
 
  [Check out what this does](https://explainshell.com/explain?cmd=ps+-ef+%7C+grep+9222+%7C+cut+-f+5+-d+%27+%27++%7C+xargs+kill)
 
- 
